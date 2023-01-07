@@ -130,7 +130,7 @@ function getDuration(){
 <header class="header">
 
   <a href="./../"><img
-    src="./img/cinetools.png"
+    src="./img/home.png"
     class="logo"
   /></a>
 
@@ -152,24 +152,11 @@ function getDuration(){
   
   <div class="controls">
 
+   
+
+   <img src="./img/tape.jpg" class="img-fluid" />
     
-    <div class="w-100 toolbar">
-      
-    <div class="wrap">
-      
-      <div class="btn-group w-100">
-      
-      <button class="btn btn-outline-dark" class:active="{activeTab == 'upload'}" on:click={() => setTab('upload')}><i class="fas fa-th"></i><div class="btn-label">Controls</div></button>
-    
-       
-    
-      
-    </div>
-    
-    </div>
-      
-    </div>
-    
+
 
     
     <div class="tab text-center" id="tab-upload" style="display: block;">
