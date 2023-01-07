@@ -150,15 +150,10 @@ function getDuration(){
     
   </div>
   
-  <div class="controls" style="">
-
-   
+  <div class="controls">
 
     
-
-
-    
-    <div class="tab text-center" id="tab-upload" style="display: block; border-top: 0;background-image: url(img/tape-long.jpg); background-size: cover; background-position: top center; padding-top: 150px;">
+    <div class="tab text-center" id="tab-upload" style="display: block; border-top: 0;background-image: url(img/tape-long.jpg); background-size: cover; background-position: top center; padding: 40px; padding-top: 150px;">
    
   
   {#if !playing}
