@@ -130,7 +130,7 @@ function getDuration(){
 <header class="header">
 
   <a href="./../"><img
-    src="https://zinematic.vercel.app/img/zinematic.png"
+    src="./img/cinetools.png"
     class="logo"
   /></a>
 
