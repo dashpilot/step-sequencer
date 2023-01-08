@@ -16,11 +16,12 @@ let started = false;
 let bpm = 120;
 
 let keys, recorder;
+let isMobile;
 
 
 onMount(async ()=>{
  
-
+isMobile = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
   
   keys = new Tone.Players({
     urls: {
@@ -143,6 +144,11 @@ function getDuration(){
   
   <div class="wrap">
   <div class="screen">
+    
+    {#if isMobile}
+    <div class="alert alert-warning text-center"><i class="fas fa-exclamation-triangle"></i> &nbsp;This app currently does not work on mobile.</div>
+    
+    {/if}
     
   <tone-step-sequencer rows="9"></tone-step-sequencer>
   
