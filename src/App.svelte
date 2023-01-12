@@ -130,14 +130,19 @@ function getDuration(){
 
 <header class="header">
 
+<!--
   <a href="./../"><img
     src="./img/cinetools.png"
     class="logo"
   /></a>
+-->
+
+
+<div class="text-center"><h5><a href="https://www.clipflare.com">ClipFlare Tape Deck</a></h5></div>
 
 
 </header>
-<br><br>
+
 
 <main>
   
