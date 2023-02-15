@@ -21,6 +21,11 @@ let isMobile;
 
 onMount(async ()=>{
  
+ import('./sequencer.js');
+ 
+
+ 
+ /*
 isMobile = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
   
   keys = new Tone.Players({
@@ -46,13 +51,26 @@ isMobile = (navigator.maxTouchPoints || 'ontouchstart' in document.documentEleme
   document.querySelector("tone-step-sequencer").addEventListener("trigger", ({ detail }) => {
     keys.player(detail.row).start(detail.time, 0, "16t");
   });
-  
+  */
  
   
   
 })
 
 function setTab(){
+  
+}
+
+function start(){
+  if (!started) {
+    // Only exectued the first time the button is clicked
+    // initializing Tone, setting the volume, and setting up the loop
+    
+    Tone.start();
+    //Tone.getDestination().volume.rampTo(-10, 0.001)
+  
+    started = true;
+  }
   
 }
 
@@ -150,12 +168,149 @@ function getDuration(){
   <div class="wrap">
   <div class="screen">
     
-    {#if isMobile}
-    <div class="alert alert-warning text-center"><i class="fas fa-exclamation-triangle"></i> &nbsp;This app currently does not work on mobile.</div>
+  
+  
+        <div class='drums'>
+            <div>Kick</div>
+            <div class='kick'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+            </div>
+            <div>Snare</div>
+            <div class='snare'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+            </div>
+            <div>Clap</div>
+            <div class='clap'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+            </div>
+            <div>Hihat</div>
+            <div class='hihat'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+            </div>
+            <div>Tom</div>
+            <div class='tom'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+            </div>
+        </div>    
+            <div class='synth'>
+                <div>Synth a5</div>
+                <div class='synth-a5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth b5</div>
+                <div class='synth-b5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth c5</div>
+                <div class='synth-c5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth d5</div>
+                <div class='synth-d5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth e5</div>
+                <div class='synth-e5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth f5</div>
+                <div class='synth-f5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+                <div>Synth g5</div>
+                <div class='synth-g5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                </div>
+        </div>
+ 
     
-    {/if}
-    
+    <!--
   <tone-step-sequencer rows="9"></tone-step-sequencer>
+-->
   
 
     
