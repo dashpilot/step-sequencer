@@ -6,8 +6,6 @@ import { onMount } from 'svelte';
 
 
 
-import classNames from "https://cdn.skypack.dev/classnames/bind";
-
 let activeTab = "upload";
 
 let playing = false;
@@ -21,8 +19,22 @@ let isMobile;
 
 onMount(async ()=>{
  
- import('./sequencer.js');
+ // import('./sequencer.js');
  
+ // https://beat-makerrr.glitch.me/app.js
+ // https://beat-makerrrr.glitch.me/app.js
+ 
+ /*  Most browsers require a user action to intiate AudioContext
+ This is a fix to allow tone to start on pageload*/
+ document.documentElement.addEventListener("mousedown", () => {
+   if (Tone.context.state !== "running") Tone.context.resume();
+ });
+ 
+ let beats = [];
+ let notes = [];
+
+ 
+ sequencer();
 
  
  /*
@@ -44,8 +56,7 @@ isMobile = (navigator.maxTouchPoints || 'ontouchstart' in document.documentEleme
     baseUrl: "./audio/"
   }).toDestination();
   
-  recorder = new Tone.Recorder();
-  keys.connect(recorder);
+ 
   
   
   document.querySelector("tone-step-sequencer").addEventListener("trigger", ({ detail }) => {
@@ -56,6 +67,137 @@ isMobile = (navigator.maxTouchPoints || 'ontouchstart' in document.documentEleme
   
   
 })
+
+function sequencer() {
+  /*
+  //BPM slider event handler
+  let slider = document.getElementById("bpmRange");
+  let output = document.getElementById("bpmOutput");
+  output.innerHTML = slider.value;
+
+  slider.oninput = function () {
+    output.innerHTML = this.value;
+    Tone.Transport.bpm.value = this.value;
+  };
+*/
+
+ recorder = new Tone.Recorder();
+
+  //Instrument sound files
+  const kick = new Tone.Player(
+    "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fkick-electro01.wav?v=1614018257380"
+  ).toDestination();
+  const snare = new Tone.Player(
+    "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fsnare-lofi02.wav?v=1614018257350"
+  ).toDestination();
+  const clap = new Tone.Player(
+    "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fclap-808.wav?v=1614018257350"
+  ).toDestination();
+  const hihat = new Tone.Player(
+    "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fhihat-808.wav?v=1614018257350"
+  ).toDestination();
+  const tom = new Tone.Player(
+    "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Ftom-808.wav?v=1614018257451"
+  ).toDestination();
+
+  //Tone js' synth object
+  const synthA5 = new Tone.Synth().toDestination();
+  const synthB5 = new Tone.Synth().toDestination();
+  const synthC5 = new Tone.Synth().toDestination();
+  const synthD5 = new Tone.Synth().toDestination();
+  const synthE5 = new Tone.Synth().toDestination();
+  const synthF5 = new Tone.Synth().toDestination();
+  const synthG5 = new Tone.Synth().toDestination();
+
+
+ 
+ 
+// .connect(recorder);
+
+  Tone.Transport.scheduleRepeat(repeat, "8n");
+  
+  // Tone.Transport.start();
+  let index = 0;
+
+  function repeat(time) {
+    let step = index % 16;
+
+    //console.log(step);
+    let kickInputs = document.querySelector(
+      `.kick input:nth-child(${step + 1})`
+    );
+    let snareInputs = document.querySelector(
+      `.snare input:nth-child(${step + 1})`
+    );
+    let clapInputs = document.querySelector(
+      `.clap input:nth-child(${step + 1})`
+    );
+    let hihatInputs = document.querySelector(
+      `.hihat input:nth-child(${step + 1})`
+    );
+    let tomInputs = document.querySelector(`.tom input:nth-child(${step + 1})`);
+    let synthInputsa5 = document.querySelector(
+      `.synth-a5 input:nth-child(${step + 1})`
+    );
+    let synthInputsb5 = document.querySelector(
+      `.synth-b5 input:nth-child(${step + 1})`
+    );
+    let synthInputsc5 = document.querySelector(
+      `.synth-c5 input:nth-child(${step + 1})`
+    );
+    let synthInputsd5 = document.querySelector(
+      `.synth-d5 input:nth-child(${step + 1})`
+    );
+    let synthInputse5 = document.querySelector(
+      `.synth-e5 input:nth-child(${step + 1})`
+    );
+    let synthInputsf5 = document.querySelector(
+      `.synth-f5 input:nth-child(${step + 1})`
+    );
+    let synthInputsg5 = document.querySelector(
+      `.synth-g5 input:nth-child(${step + 1})`
+    );
+    if (kickInputs.checked) {
+      kick.start(time);
+    }
+    if (snareInputs.checked) {
+      snare.start(time);
+    }
+    if (clapInputs.checked) {
+      clap.start(time);
+    }
+    if (hihatInputs.checked) {
+      hihat.start(time);
+    }
+    if (tomInputs.checked) {
+      tom.start(time);
+    }
+    if (synthInputsa5.checked) {
+      synthA5.triggerAttackRelease("A3", "8n", time);
+    }
+    if (synthInputsb5.checked) {
+      synthB5.triggerAttackRelease("B3", "8n", time);
+    }
+    if (synthInputsc5.checked) {
+      synthC5.triggerAttackRelease("C3", "8n", time);
+    }
+    if (synthInputsd5.checked) {
+      synthD5.triggerAttackRelease("D3", "8n", time);
+    }
+    if (synthInputse5.checked) {
+      synthE5.triggerAttackRelease("E3", "8n", time);
+    }
+    if (synthInputsf5.checked) {
+      synthF5.triggerAttackRelease("F3", "8n", time);
+    }
+    if (synthInputsg5.checked) {
+      synthG5.triggerAttackRelease("G3", "8n", time);
+    }
+    index++;
+  }
+  
+
+}
 
 function setTab(){
   
@@ -104,6 +246,9 @@ function stop(){
 }
 
 function record(){
+  
+  
+  
   
   Tone.Transport.stop();
   Tone.Transport.start();

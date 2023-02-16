@@ -66,6 +66,11 @@ function sequencer() {
   const synthF5 = new Tone.Synth().toDestination();
   const synthG5 = new Tone.Synth().toDestination();
 
+  /*
+  const recorder1 = new Tone.Recorder();
+  kick.connect(recorder1);
+  */
+
   Tone.Transport.scheduleRepeat(repeat, "8n");
   // Tone.Transport.start();
   let index = 0;
