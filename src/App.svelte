@@ -86,28 +86,28 @@ function sequencer() {
   //Instrument sound files
   const kick = new Tone.Player(
     "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fkick-electro01.wav?v=1614018257380"
-  ).toDestination();
+  ).toDestination().connect(recorder);
   const snare = new Tone.Player(
     "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fsnare-lofi02.wav?v=1614018257350"
-  ).toDestination();
+  ).toDestination().connect(recorder);
   const clap = new Tone.Player(
     "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fclap-808.wav?v=1614018257350"
-  ).toDestination();
+  ).toDestination().connect(recorder);
   const hihat = new Tone.Player(
     "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Fhihat-808.wav?v=1614018257350"
-  ).toDestination();
+  ).toDestination().connect(recorder);
   const tom = new Tone.Player(
     "https://cdn.glitch.com/d76f6799-eb82-4320-a573-9366109360da%2Ftom-808.wav?v=1614018257451"
-  ).toDestination();
+  ).toDestination().connect(recorder);
 
   //Tone js' synth object
-  const synthA5 = new Tone.Synth().toDestination();
-  const synthB5 = new Tone.Synth().toDestination();
-  const synthC5 = new Tone.Synth().toDestination();
-  const synthD5 = new Tone.Synth().toDestination();
-  const synthE5 = new Tone.Synth().toDestination();
-  const synthF5 = new Tone.Synth().toDestination();
-  const synthG5 = new Tone.Synth().toDestination();
+  const synthA5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthB5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthC5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthD5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthE5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthF5 = new Tone.Synth().toDestination().connect(recorder);
+  const synthG5 = new Tone.Synth().toDestination().connect(recorder);
 
 
  
