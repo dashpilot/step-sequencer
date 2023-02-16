@@ -169,10 +169,19 @@ function getDuration(){
   <div class="screen">
     
   
-  
-        <div class='drums'>
+  <div style="width: 350px; margin: 0 auto;">
+        <div class='drums mb-4'>
             <div>Kick</div>
             <div class='kick'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                
                 <input type='checkbox'>
                 <input type='checkbox'>
                 <input type='checkbox'>
@@ -192,9 +201,27 @@ function getDuration(){
                 <input type='checkbox'>
                 <input type='checkbox'>
                 <input type='checkbox'>
+                
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
             </div>
             <div>Clap</div>
             <div class='clap'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                
                 <input type='checkbox'>
                 <input type='checkbox'>
                 <input type='checkbox'>
@@ -214,6 +241,15 @@ function getDuration(){
                 <input type='checkbox'>
                 <input type='checkbox'>
                 <input type='checkbox'>
+                
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
             </div>
             <div>Tom</div>
             <div class='tom'>
@@ -225,11 +261,31 @@ function getDuration(){
                 <input type='checkbox'>
                 <input type='checkbox'>
                 <input type='checkbox'>
+                
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
+                <input type='checkbox'>
             </div>
-        </div>    
+        </div> 
+        
+           
             <div class='synth'>
                 <div>Synth a5</div>
                 <div class='synth-a5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
@@ -249,9 +305,27 @@ function getDuration(){
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
+                    
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
                 </div>
                 <div>Synth c5</div>
                 <div class='synth-c5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
@@ -271,9 +345,27 @@ function getDuration(){
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
+                    
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
                 </div>
                 <div>Synth e5</div>
                 <div class='synth-e5'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
@@ -293,6 +385,15 @@ function getDuration(){
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
+                    
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
                 </div>
                 <div>Synth g5</div>
                 <div class='synth-g5'>
@@ -304,7 +405,18 @@ function getDuration(){
                     <input type='checkbox'>
                     <input type='checkbox'>
                     <input type='checkbox'>
+                    
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
+                    <input type='checkbox'>
                 </div>
+                
+            </div>
         </div>
  
     

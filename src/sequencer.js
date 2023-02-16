@@ -71,7 +71,7 @@ function sequencer() {
   let index = 0;
 
   function repeat(time) {
-    let step = index % 8;
+    let step = index % 16;
 
     //console.log(step);
     let kickInputs = document.querySelector(
