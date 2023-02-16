@@ -16,6 +16,9 @@ let bpm = 120;
 let keys, recorder;
 let isMobile;
 
+let step;
+let index = 0;
+
 
 onMount(async ()=>{
  
@@ -117,10 +120,10 @@ function sequencer() {
   Tone.Transport.scheduleRepeat(repeat, "8n");
   
   // Tone.Transport.start();
-  let index = 0;
+  
 
   function repeat(time) {
-    let step = index % 16;
+    step = index % 16;
 
     //console.log(step);
     let kickInputs = document.querySelector(
@@ -194,6 +197,8 @@ function sequencer() {
       synthG5.triggerAttackRelease("G3", "8n", time);
     }
     index++;
+    
+   
   }
   
 
@@ -230,11 +235,11 @@ async function play(){
   
   // toggle Tone.Trasport and the flag variable.
   if (playing) {
-   
     Tone.Transport.stop();
+    index = 0;
     playing = false;
   } else {
-   
+    index = 0;
     Tone.Transport.start();
     playing = true;
   }
@@ -242,14 +247,12 @@ async function play(){
 
 function stop(){
   Tone.Transport.stop();
+  index = 0;
   playing = false;
 }
 
 function record(){
-  
-  
-  
-  
+
   Tone.Transport.stop();
   Tone.Transport.start();
   playing = true;
@@ -314,7 +317,7 @@ function getDuration(){
   <div class="screen">
     
   
-  <div style="width: 350px; margin: 0 auto;">
+  <div style="width: 750px; margin: 0 auto;">
         <div class='drums mb-4'>
             <div>Kick</div>
             <div class='kick'>
@@ -663,5 +666,7 @@ function getDuration(){
   
   
 </main>
+
+
 
 
