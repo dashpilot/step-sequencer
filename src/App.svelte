@@ -317,7 +317,7 @@ function getDuration(){
   <div class="screen">
     
   
-  <div style="width: 750px; margin: 0 auto;">
+  <div class="pads">
         <div class='drums mb-4'>
             <div>Kick</div>
             <div class='kick'>

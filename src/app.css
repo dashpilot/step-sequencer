@@ -462,6 +462,12 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 /* specific */
 
+.pads {
+  width: 715px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
 .redmeansrecording {
   color: red;
 }
