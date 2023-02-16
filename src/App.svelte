@@ -156,7 +156,7 @@ function getDuration(){
 -->
 
 
-<div class="text-center"><h5><a href="https://www.clipflare.com">ClipFlare Tape Deck</a></h5></div>
+<div class="text-center"><h5><a href="https://www.clipflare.com">Tape Deck</a></h5></div>
 
 
 </header>
